@@ -65,6 +65,17 @@ list_y = [
 logger.info(f" list_y is {list_y}")
 
 # TODO: define some custom functions
+def list_average():
+    count_listA = list_A.count()
+    logger.info(f"Number of items in list_A is  {count_listA}")
+    print(count_listA)
+    sum_listA = sum(list_A)
+    logger.info(f" Sum of list_A is {sum_listA}")
+    print(sum_listA)
+    avg = sum_listA/count_listA
+    logger.info(f"Average of list_A is {avg}")
+    print(avg)
+
 def list_statistics():
     mean = statistics.mean(list_A)
     median = statistics.median(list_A)
@@ -87,6 +98,8 @@ def list_statistics():
 
     logger.info(f"standard deviation of list_A is {stdev}")
     print(f"standard deviation of list_A is {stdev}")
+
+
 
 def list_correlation_prediction():
     logger.info(f" list_x is {list_X}")
@@ -253,7 +266,8 @@ if __name__ == "__main__":
     list_transformation()
     print("calling list_comprehensions()")
     list_comprehensions()
-    
+    print(" calling custon function list_average()")
+    list_average
     show_log()
     
 

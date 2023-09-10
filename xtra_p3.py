@@ -48,12 +48,17 @@ def compare_two_plays():
     # hint: use sorted() to sort the list
     # hint: use set() to remove duplicates
     # name them wordset1 and wordset2
-    wordset1 = set()  # TODO fix this line
-    wordset2 = set()  # TODO fix this line
+    wordset1 = sorted(wordlist1)  # TODO fix this line
+    wordset2 = set(wordlist1)  # TODO fix this line
+
+   # print('\n' )
+   # print(f"wordset1 is {wordset1}")
+  #  print('\n' )
+  #  print(f"wordset2 is {wordset2}")
 
 
     # initialize a variable maxlen = 10
-    maxlen = 1  # TODO fix this line
+    maxlen = 10  # TODO fix this line
 
     # use a list comprension to get a list of words longer than 10
     # for word in wordset1
@@ -64,9 +69,17 @@ def compare_two_plays():
     # then convert the list to a set to we can take the intersection
     # hint: use set()
     # name them longwordset1 and longwordset2
+    longwords1 = []
+    for word in wordset1:
+        if len(word) > 10:
+            longwords1.append(word)
 
-    longwordset1 = set()  # TODO: fix this line
-    longwordset2 = set()  # TODO: fix this line
+    longwords2 = []
+    for word in wordset2:
+        if len(word) > 10:
+            longwords2.append(word)
+    longwordset1 = set(longwords1)
+    longwordset2 = set(longwords2)  # TODO: fix this line
 
     # find the intersection of the two sets
     # that is, the words in both longwordset1 1 & longwordset2
